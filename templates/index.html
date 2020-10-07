@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+First Attempt on deployment
+</head>
+<body>
+    <h1> Prescreening Depression</h1>
+    <form action = "{{url_for('predict')}}" method="post">
+        <input type="text" name="parents" placeholder="Parent's Status" required="required"/>
+        <input type="text" name="family" placeholder="Number of Members of the Family" required="required"/>
+        <input type="text" name="ailment" placeholder="Physical Ailment" required="required"/>
+        <input type="text" name="financial" placeholder="Financial Support" required="required"/>
+        <input type="text" name="activities" placeholder="Physical Activities" required="required"/>
+        <input type="text" name="self" placeholder="Self Evaluation" required="required"/>
+        <input type="text" name="gender" placeholder="Gender" required="required"/>
+        <input type="text" name="pscore" placeholder="Personality Score" required="required"/>
+        <button type="submit">Predict</button>
+    </form>
+    <br>
+    <br>
+    {{ prediction_text }}
+</body>
+</html>
